@@ -13,7 +13,8 @@ fi
 
 # Check dependencies
 to_install=""
-for dep in libsqlite3-dev sqlite3 python-cairo libmemcached-dev memcached; do
+for dep in libsqlite3-dev sqlite3 python-cairo libmemcached-dev memcached \
+           rrdtool librrd-dev; do
     dpkg -l | grep ${dep} &>/dev/null
     if [ "$?" != "0" ]; then
         to_install="$to_install $dep"

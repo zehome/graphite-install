@@ -1,7 +1,9 @@
-django
 pysqlite
 python-memcached
 pylibmc
 twisted
 txamqp
 zope.interface
+python-rrdtool
+django
+django-tagging
