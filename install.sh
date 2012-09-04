@@ -62,6 +62,8 @@ pip install graphite-web \
     --install-option="--prefix=${venvdir}/graphite" \
     --install-option="--install-scripts=${venvdir}/bin" \
     --install-option="--install-lib=${venvdir}/lib/python2.7/site-packages"
+echo "Link graphite-web webapp to ${venvdir}/graphite/webapp"
+ln -s ${venvdir}/lib/python2.7/site-packages/graphite ${venvdir}/graphite/webapp
 
 echo "Install basic configiration..."
 sed -e "s,%%GRAPHITE%%,${venvdir}/graphite," conf/carbon.conf.template > ${venvdir}/graphite/conf/carbon.conf
