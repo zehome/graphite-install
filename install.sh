@@ -39,7 +39,7 @@ if [ -d "$venvdir" ]; then
 fi
 
 echo "Creating virtualenv in ${venvdir}..."
-virtualenv $venvdir
+virtualenv --system-site-packages $venvdir
 
 echo "Sourcing virtualenv..."
 source $venvdir/bin/activate
